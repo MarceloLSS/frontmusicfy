@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MusicFy - Música</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        p {
+            white-space: pre-wrap;
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -18,24 +25,213 @@
             </nav>
         </header>
         <main>
-            <h2>Música: Título da Música</h2>
+            <h2 id="tituloMusica">Música: Título da Música</h2>
             <div class="iframe-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/1G4isv_Fylg?si=gKPyHbrDI7zfVANq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/watch?v=8UVNT4wvIGY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
+            
             <div class="lyrics-chords">
                 <h3>Letra e Cifra</h3>
-                <pre>
-[C]                [G]
-Lorem ipsum dolor sit amet,
-[F]                [C]
-consectetur adipiscing elit.
-[C]                [G]
-Sed do eiusmod tempor incididunt
-[F]                [C]
-ut labore et dolore magna aliqua.
-                </pre>
+                <p id="jsonParagraph"></p>
             </div>
         </main>
     </div>
+
+    <script>
+        var json = {
+  "artist": "Coldplay",
+  "name": "The Scientist",
+  "youtube_url": "https://www.youtube.com/watch?v=RB-RcX5DS5A",
+  "cifraclub_url": "https://www.cifraclub.com.br/coldplay/the-scientist",
+  "cifra": [
+    "[Intro]  C#m7  A9  E  E9",
+    "",
+    "[Intro e Primeira Parte]",
+    "",
+    "Parte 1 de 2",
+    "   C#m7              A9",
+    "E|------------------------------------------| ",
+    "B|-0---0---0---0----0---0---0---0-----------| ",
+    "G|-1---1---1---1----2---2---2---2-----------| ",
+    "D|-2---2---2---2----2---2---2---2-----------| ",
+    "A|-4-4-4-4-4-4-4-4--0-0-0-0-0-0-0-0---------| ",
+    "E|------------------------------------------| ",
+    "",
+    "",
+    "Parte 2 de 2",
+    "   E                E9",
+    "E|------------------------------------------| ",
+    "B|-0---0---0---0----0---0---0---0-----------| ",
+    "G|-1---1---1---1----1---1---1---1-----------| ",
+    "D|-2---2---2---2----4---4---4---4-----------| ",
+    "A|------------------------------------------| ",
+    "E|-0-0-0-0-0-0-0-0--0-0-0-0-0-0-0-0---------| ",
+    "",
+    "[Primeira Parte]",
+    "",
+    "C#m7             A9",
+    "     Come up to meet you",
+    "              E",
+    "Tell you I'm sorry",
+    "                    E9        C#m7",
+    "You don't know how lovely you are",
+    "",
+    "          A9",
+    "I had to find you",
+    "            E",
+    "Tell you I need you",
+    "               E9       C#m7",
+    "Tell you I'll set you apart",
+    "",
+    "                 A9",
+    "Tell me your secrets",
+    "                  E",
+    "And ask me your questions",
+    "             E9           C#m7",
+    "Oh, lets go back to the start",
+    "",
+    "            A9",
+    "Running in circles",
+    "           E",
+    "Coming up tails",
+    "             E9",
+    "Heads on a science apart",
+    "",
+    "[Refrão]",
+    "",
+    "A9                      E",
+    "  Nobody said it was easy",
+    "              E9             A9",
+    "It's such a shame for us to part",
+    "                      E",
+    "Nobody said it was easy",
+    "             E7M(9)        E6      B",
+    "No one ever said it would be this hard",
+    "",
+    "Oh take me back to the start",
+    "",
+    "[Segunda Parte] E  A9  E  E9",
+    "",
+    "[Segunda Parte]",
+    "",
+    "Parte 1 de 5",
+    "   A9",
+    "E|------------------------------------------| ",
+    "B|-0---0---0---0----0---0---0---0-----------| ",
+    "G|-2---2---2---2----2---2---2---2-----------| ",
+    "D|-2---2---2---2----2---2---2---2-----------| ",
+    "A|-0-0-0-0-0-0-0-0--0-0-0-0-0-0-0-0---------| ",
+    "E|------------------------------------------| ",
+    "",
+    "",
+    "Parte 2 de 5",
+    "   E                E9",
+    "E|------------------------------------------| ",
+    "B|-0---0---0---0----0---0---0---0-----------| ",
+    "G|-1---1---1---1----1---1---1---1-----------| ",
+    "D|-2---2---2---2----4---4---4---4-----------| ",
+    "A|------------------------------------------| ",
+    "E|-0-0-0-0-0-0-0-0--0-0-0-0-0-0-0-0---------| ",
+    "",
+    "",
+    "Parte 3 de 5",
+    "   A9",
+    "E|------------------------------------------| ",
+    "B|-0---0---0---0----0---0---0---0-----------| ",
+    "G|-2---2---2---2----2---2---2---2-----------| ",
+    "D|-2---2---2---2----2---2---2---2-----------| ",
+    "A|-0-0-0-0-0-0-0-0--0-0-0-0-0-0-0-0---------| ",
+    "E|------------------------------------------| ",
+    "",
+    "",
+    "Parte 4 de 5",
+    "   E               E7M(9)   E6",
+    "E|------------------------------------------| ",
+    "B|-0---0---0---0----7---7---5---5-----------| ",
+    "G|-1---1---1---1----8---8---6---6-----------| ",
+    "D|-2---2---2---2----6---6---6---6-----------| ",
+    "A|------------------------------------------| ",
+    "E|-0-0-0-0-0-0-0-0--0-0-0-0-0-0-0-0---------| ",
+    "",
+    "",
+    "Parte 5 de 5",
+    "   B",
+    "E|------------------2-----------------------| ",
+    "B|-4---4---4---4-5--------------------------| ",
+    "G|-4---4---4---4-4--4-----------------------| ",
+    "D|-4---4---4---4-4--4-----------------------| ",
+    "A|-2-2-2-2-2-2-2-2--2-----------------------| ",
+    "E|------------------------------------------| ",
+    "",
+    "C#m7             A9",
+    "     I was just guessing",
+    "                E",
+    "At numbers and figures",
+    "              E9       C#m7",
+    "Pulling your puzzles apart",
+    "",
+    "               A9",
+    "Questions of science",
+    "              E",
+    "Science and progress",
+    "                 E9          C#m7",
+    "Do not speak as loud as my heart",
+    "",
+    "             A9",
+    "Tell me you love me",
+    "               E",
+    "Come back and haunt me",
+    "          E9           C#m7",
+    "Oh and I rush to the start",
+    "",
+    "            A9",
+    "Running in circles",
+    "             E",
+    "Chasing our tails",
+    "        E9        B11/D#",
+    "Coming back as we are",
+    "",
+    "[Refrão]",
+    "",
+    "A9                       E",
+    "   Nobody said it was easy",
+    "              E9             A9",
+    "It's such a shame for us to part",
+    "                      E",
+    "Nobody said it was easy",
+    "             E7M              E6  B",
+    "No one ever said it would be so  hard",
+    "                        E  A9  E  E9",
+    "I'm going back to the start",
+    "",
+    "[Final]",
+    "",
+    "( C#m7  A9  E )",
+    "",
+    "C#m7    A9             E  E9",
+    "     Oh uhhh  uh uh uh uh",
+    "C#m7    A9             E  E9",
+    "     Oh uhhh  uh uh uh uh",
+    "C#m7    A9             E  E9",
+    "     Oh uhhh  uh uh uh uh",
+    "C#m7    A9             E",
+    "     Oh uhhh  uh uh uh uh",
+    ""
+  ]
+}
+
+// Função para formatar a cifra e remover caracteres indesejados
+function formatCifra(cifra) {
+    // Mapeia cada linha da cifra e remove os caracteres indesejados
+    return cifra.map(line => line.replace(/[,\[\]\{\}"]/g, '')).join('\n');
+}
+
+// Obtém o elemento <p> pelo ID
+var jsonParagraph = document.getElementById("jsonParagraph");
+
+// Define o conteúdo do parágrafo como a cifra formatada
+jsonParagraph.textContent = formatCifra(json.cifra);
+
+    </script>
 </body>
 </html>
