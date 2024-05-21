@@ -1,0 +1,115 @@
+/* TOPBAR */
+#topbar {
+  width: 100%;
+  height: 60px;
+  background-image: linear-gradient(50deg, #0C222F, #1d5575);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  position: relative;
+}
+
+#topbar .topbar-menu {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+#topbar .topbar-menu #menu-wrapper {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  z-index: 9999;
+}
+
+#topbar .topbar-menu #menu-wrapper:hover {
+  cursor: pointer;
+}
+
+#topbar .topbar-menu #menu-wrapper img {
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+}
+
+#topbar .topbar-search {
+  display: flex;
+  align-items: center;
+}
+
+#searchbar {
+  border: 0;
+  background-color: #fff;
+  height: 40px;
+  width: 300px;
+  max-width: 60%;
+  border-radius: 6px 0 0 6px;
+  padding: 0 12px;
+  color: #111;
+}
+
+#searchbar:focus {
+  outline: 0;
+}
+
+#dosearch {
+  border: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 0 6px 6px 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#dosearch:hover {
+  cursor: pointer;
+}
+
+#dosearch img {
+  width: 30px;
+  height: 30px;
+  transform: scaleX(-1);
+}
+
+#profile {
+  width: 40px;
+  height: 40px;
+  background-color: #0F2B3C;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#profile:hover {
+  cursor: pointer;
+}
+
+#profile span {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* SIDEBAR */
+#sidebar {
+  width: 80vw;
+  min-width: 400px;
+  max-width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: #000;
+  left: 0;
+  top: 0;
+  display: none;
+  padding-top: 40px;
+}
+
+#sidebar.active {
+  display: flex;
+}

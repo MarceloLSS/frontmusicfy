@@ -10,11 +10,14 @@ body {
     background-color: #0C222F;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    color: #fff;
+}
+
+#bg {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #fff;
 }
 
 #fundo {
